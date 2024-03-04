@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrappersite{
+            width: 100%;
+            height: 2000px;
+            /* background-color: lightgreen; */
+        }
+        .headerwrapper{
+            width: 100%;
+            height: 200px;
+            /* background-color: orange; */
+        }
+        .header__info{
+            width: 100%;
+            height: 50px;
+            /* background-color: pink; */
+            padding: 10px;
+        }
+        .info{
+            width: 100%;
+            height: 40px;
+         /* background-color: yellow;  */
+        }
+        .menu__wrapper{
+            width: 100%;
+            height: 120px;
+            /* background-color: cyan; */
+        }
+        .logo{
+            width: 25%;
+            height: 120px;
+            /* background-color:red; */
+            padding: 10px;
+            float: left;
+        }
+        .logo img{
+            width: 45%;
+            height: 95px;
+        }
+        .menu{
+            width: 75%;
+            height: 120px;
+            /* background-color: rgb(131, 131, 223); */
+            float: right;
+            padding-top:50px;
+            /* padding-left:50px; */
+        }
+        .menu__lists{
+            width: 70%;
+            height: 110px;
+            margin: auto;
+            /* background-color: red; */
+        }
+        .menu__lists >ul{
+            list-style-type:none;
+        }
+        .menu__lists > ul> li{
+            float: left;
+        }
+        .menu__lists>ul>li>a{
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px;
+            color:darkblue;
+            font-family:'Karla', sans-serif;
+            border-top:2px solid transparent;
+            padding:20px;
+            font-weight: 400;
+        }
+        .menu__lists>ul>li>a:hover{
+            border-top:2px solid blue;
+            color:blue;
+            transition: 2s;
+        }
+        .section{
+            width: 100%;
+            height: 800px;
+            background-color: rgb(71, 118, 205);
+            padding: 60px;
+        }
+        .section__content{
+            width: 70%;
+            height: 500px;
+            /* background-color: yellow; */
+            margin-top:110px;
+            margin-left: 90px;
+        }
+        .section__content h4{
+            color:white;
+            font-size: 22px;
+            font-family:'Karla', sans-serif;
+        }
+        .section__content h1{
+            margin-top: 20px;
+            color:white;
+            font-size: 80px;
+            font-family:'Karla', sans-serif;
+        }
+        .section__content h5{
+            margin-top: 20px;
+            color:white;
+            font-size: 18px;
+            font-family:'Karla', sans-serif;
+            font-style: italic;
+            line-height: 34px;
+            padding-right: 90px;
+            letter-spacing:0.1px;
+            padding:20px;
+        }
+        .section__btn{
+            font-size: 18px;
+            color:rgb(28, 85, 143);
+            width: 20%;
+            height: 50px;
+            background-color: white;
+            text-align: center;
+            padding-top:10px;
+            border-radius: 5px;
+            font-weight: 500;
+            
+        }
+        .section__btn:hover{
+            color:white;
+            background-color: rgb(31, 31, 72);
+        }
+        .ddd__wrapper{
+            width: 100%;
+            height: 500px;
+            /* background-color: yellow; */
+            padding:50px;
+        }
+       .ddd-who-are{
+        width: 80%;
+        height: 450px;
+        /* background-color: orange; */
+        margin: auto;
+       }
+       .left__ddd{
+        float: left;
+        width: 50%;
+        height: 450px;
+        /* background-color: pink; */
+       }
+       .left__ddd h4{
+        color:blue;
+        margin-top: 50px;
+
+       }
+       .left__ddd h1{
+        font-size: 70px;
+        color:rgb(27, 27, 77);
+        font-family: "Gilroy", Sans-serif;
+        font-weight: 700;
+        margin-top: 10px;
+       }
+       .right__ddd{
+        float: right;
+        width: 50%;
+        height: 450px;
+        padding-top: 40px;
+        /* background-color: green; */
+       }
+       .right__ddd p{
+        margin-top: 20px;
+        color: #616161;
+        font-family: "Karla", Sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 27px;
+       }
+       .development__wrapper{
+        width: 100%;
+        height: 420px;
+        /* background-color: orange; */
+       }
+       .development__section{
+        width: 80%;
+        height: 390px;
+        /* background-color: green; */
+        /* text-align: center; */
+        margin: auto;
+        /* padding: 20px; */
+       }
+       .web-development{
+        width: 20%;
+        height: 320px;
+        float:left;
+        margin:10px;
+
+        /* background-color: red; */
+       }
+       .icon{
+        width: 100%;
+        height: 90px;
+        /* background-color: yellow; */
+        text-align: center;
+
+       }
+       .icon i{
+        font-size: 50px;
+        color:blue;
+        margin-top: 35px;
+       }
+       .web-development:hover i{
+        color:white;
+       }
+       .web-development h2{
+        text-align: center;
+        padding-top:40px;
+       }
+       .web-development h4{
+        text-align: center;
+        font-size: 16px;
+        color:#6EC1E4;
+        padding: 10px;
+        margin-left: 20px;
+        font-family: "Karla", Sans-serif;
+        letter-spacing: 0.1px;
+        line-height: 1.8em;
+       }
+       .web-development:hover  {
+        color:white;
+        background-color: blue;
+       }
+       .services__wrapper{
+        width: 100%;
+        height: 1000px;
+        /* background-color: rebeccapurple; */
+       }
+       .services__container{
+        width: 78%;
+        height: 1100px;
+        /* background-color: yellow; */
+        margin: auto;
+       }
+       .services1__onair{
+        width: 30%;
+        height: 480px;
+        float:left;
+        margin:10px;
+        /* background-color: #616161; */
+       }
+       .onair__image{
+        width: 100%;
+        height: 250px;
+        /* background-color: rgb(182, 1, 1); */
+       }
+       .onair__image img{
+        width: 100%;
+        height: 250px;
+       }
+       .onair__content{
+        width: 100%;
+        height: 200px;
+        /* background-color: #6EC1E4; */
+        margin-top: 40px;
+       }
+       .onair__content h2{
+        /* margin-left:20px; */
+        padding: 20px;
+       }
+       .onair__content h4{
+        color:#616161;
+        margin-left: 30px;
+        margin-right: 30px;
+        font-family: "Karla", Sans-serif;
+        font-size: 15px;
+        line-height: 27px;
+        padding-left:-7px;
+       }
+       .why-chooseus-wrapper{
+        width: 100%;
+        height: 750px;
+        background-color: rgb(27, 27, 40);
+        padding:30px;
+       }
+       .why-choose-us{
+        width: 80%;
+        height: 650px;
+        /* background-color: yellow; */
+        margin: auto;
+    }
+    .why-chooseus-section1{
+        width: 80%;
+        height: 250px;
+        /* background-color: #6EC1E4; */
+        margin: auto;
+    }
+    .why-chooseus-section1 h4{
+    font-family: "Karla", Sans-serif;
+    color:white;
+    text-align: center;
+    margin-top: 90px;
+}
+.why-chooseus-section1 h1{
+    font-family: "Karla", Sans-serif;
+    color:white;
+    text-align: center;
+    font-size: 60px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+    .why-chooseus-section2{
+        width: 100%;
+        height: 450px;
+        /* background-color: #06384d; */
+    }
+    .industry__experience{
+        width: 32%;
+        height: 400px;
+        float: left;
+        /* background-color: pink; */
+    }
+    .industry-experience-icon{
+        width: 25%;
+        height: 60px;
+        /* background-color: red; */
+        margin: auto;
+    }
+    .industry-experience-icon i{
+        font-size: 55px;
+        color:white;
+        text-align: center;
+    }
+    .industry__experience h2{
+        text-align: center;
+        color:white;
+        font-size: 28px;
+        margin-top:20px;
+        margin-left: 20px;
+    }
+    .industry__experience h4{
+        text-align: center;
+        color:#C7C7FF;
+        font-size: 14px;
+        margin-top:20px;
+        margin-left: 20px;
+        letter-spacing: 0.1px;
+        font-family:"Karla", Sans-serif;
+    }
+    .casestudy__wrapper{
+        width: 100%;
+        height: 1300px;
+        /* background-color: red; */
+        padding: 90px;
+
+    }
+    .casestudy__heading{
+        width: 40%;
+        height: 230px;
+        /* background-color: pink; */
+        margin: auto;
+    }
+    .casestudy__heading h4{
+        color:blue;
+        text-align: center;
+        font-family:"Karla", Sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+    .casestudy__heading h1{
+        color:rgb(40, 40, 72);
+        text-align: center;
+        font-family:"Karla", Sans-serif;
+        font-size: 60px;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+    }
+    .casestudy-images-wrapper{
+        width: 90%;
+        height: 1000px;
+        /* background-color: #6EC1E4; */
+        margin: auto;
+    }
+    .casestudy-images-wrapper img{
+        width: 100%;
+        height: 100%;
+    }
+    .casestudy__first{
+        width: 33.2%;
+        height: 500px;
+        /* background-color: pink; */
+        position: relative;
+        float:left;
+    }
+    .casestudy-images-firsttext>h3>a {
+
+        font-size: 35px;
+        text-decoration: none;
+        color: white;
+
+}
+    .casestudy-images-firsttext {
+        display: block;
+        width: 100%;
+        height: 130px;
+        position: absolute;
+        bottom: 0px;
+        background: linear-gradient(180deg, rgba(0, 33, 73, 0) 1%, #002149 100%);
+    }
+    .casestudy__first:hover .casestudy-images-firsttext{
+        height: 500px;
+        width: 399px;
+        background: linear-gradient(rgba(138, 102, 237, 0.5), rgba(0, 0, 0, 0.5));
+        transition: 1s;
+    }
+    .teammember__container{
+        width: 100%;
+        height: 1950px;
+        /* background-color: #616161; */
+    }
+    .team-member-header{
+        width: 60%;
+        height: 1940px;
+        /* background-color: pink; */
+        margin: auto;
+    }
+    .team-member-text{
+        width: 100%;
+        height: 300px;
+        /* background-color: #0f1925; */
+        padding:50px;
+    }
+    .team-member-text h3{
+        color:blue;
+        text-align: center;
+        font-family:"Karla", Sans-serif;
+        font-size: 16px;
+        letter-spacing: 2 px;
+        font-weight: 500;
+    }
+    .team-member-text h1{
+        color:rgb(40, 40, 72);
+        text-align: center;
+        font-family:"Karla", Sans-serif;
+        font-size: 60px;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+    }
+    .teammembers-images-wrapper{
+        width: 100%;
+        height: 1620px;
+        /* background-color:rgb(5, 113, 113); */
+    }
+    .team-member-images{
+        width: 40%;
+        height: 325px;
+        /* background-color: orange; */
+        margin: auto;
+        position: relative;
+
+    }
+      .members__content {
+        width: 425%;
+        height: 120px;
+        background-color: rgb(89, 89, 221);
+        position: absolute;
+        top: 160px;
+        display: none;
+        transition: 0.5s;
+        margin-left: -615px;
+
+    }
+    .members__content h2 {
+        color: white;
+        font-size: 26px;
+        text-align: center;
+        padding: 10px;
+        font-weight: 700;
+    }
+
+    .members__content p {
+        color: white;
+        font-size: 16px;
+        text-align: center;
+    }
+    .team-member-images:hover .members__content {
+        display: block;
+    }
+    .members__icons {
+        margin: 10px;
+        text-align: center;
+        color: white;
+    }
+    .contactus__container{
+        width: 100%;
+        height: 838px;
+        background-color: rgb(34, 110, 198);
+        padding:50px;
+    }
+    .contactus__container h4{
+        color:white;
+        text-align: center;
+        letter-spacing: 0.1em;
+        font-family:"Karla", Sans-serif;
+        font-family: 500;
+        padding: 100px;
+    }
+    .contactus__form{
+        width: 70%;
+        height: 568px;
+        margin: auto;
+        background-color: white;
+        border-radius: 5px;
+        padding: 80px;
+    }
+    .contactus__image{
+        width: 40%;
+        height: 485px;
+        /* background-color: #616161; */
+        float: left;
+    }
+    .contact-us-content{
+        width: 45%;
+        height: 490px;
+        /* background-color: rgb(255, 177, 177); */
+        float: right;
+        padding: 30px;
+        
+    }
+    .contact-us-content input,
+    .contact-us-content textarea{
+        display: block;
+        border-width: 0px 0px 1px 0px;
+        border-color: #616161;
+        width: 90%;
+        height: 40px;
+        border-radius: 8px;
+        margin-bottom: 35px;
+        background-color: transparent;
+        outline: none;
+
+    }
+    /* .contact-us-content textarea{
+    width: 100%;
+        height: 95px;
+    } */
+
+    .contact-us-content{
+        font-size: 18px;
+    }
+    .contact-us-content span{
+        color:red;
+    }
+    .contact-us-content .fname{
+        width: 30%;
+        height: 60px;
+        color:rgb(111, 108, 108);
+        
+    }
+  
+    .btn{
+        width: 50%;
+        height: 50px;
+        border-radius: 5px;
+        background-color: rgb(188, 184, 184);
+        outline: none;
+        border: 0px;
+        font-size: 16px;
+    }
+    .btn:hover{
+        color:white;
+        /* transition: 1s; */
+    }
+    .footer__wrapper{
+        background-color: #002149;
+        width: 100%;
+        height: 600px;
+        clear: both;
+    }
+    .footer__first{
+        /* background-color: red; */
+        width: 25%;
+        height: 600px;
+        float: left;
+    }
+    .footer__logo{
+        width: 100%;
+        height: 250px;
+        /* background-color:yellow; */
+        padding:10px;
+    }
+    .footer__logo img{
+        width: 80%;
+        height: auto;
+        margin:65px;
+        
+    }
+    .footer-first-content{
+        width: 100%;
+        height: 250px;
+        /* background-color:rgb(255, 89, 0); */
+        padding:30px;
+    }
+    .footer-first-content p{
+        color: rgb(147, 171, 209);
+        text-align: justify;
+        margin-left: 45px;
+        margin-top: -40px;
+        font-weight: 400;
+        letter-spacing: 0.1px;
+        font-size: 16px;
+        line-height: 1.2em;
+        font-family:"Karla", Sans-serif;
+    }
+
+    .footer__second{
+        /* background-color: rgb(212, 125, 125); */
+        width: 25%;
+        height: 600px;
+        float: left;
+    }
+    .footer-second-lists{
+        list-style-type: none;
+        margin:40px;
+        color: rgb(147, 171, 209);
+        padding-top: 35px;
+        padding-left: 40px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 2.5em;
+        letter-spacing: 0.1px;
+
+    }
+    .dash>li:not(:first-child)::before{
+        content: "...";
+        position: absolute;
+        margin-top: -1px;
+        margin-left: -20px;
+
+    }
+    .dash>li>h3::before {
+        position: absolute;
+        width: 26px;
+        height: 4px;
+        background: #006de8;
+        content: "";
+        margin-top: 20px;
+        left: 400px;
+
+    }
+    .dash h3 {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Karla", Sans-serif;
+    }
+    .dash1>li>h3::before{
+        position: absolute;
+        width: 26px;
+        height: 4px;
+        content: "";
+        background-color: #006de8;
+        margin-top: 20px;
+        left:800px;
+    }
+    .footer__third{
+        /* background-color: rgb(197, 212, 125); */
+        width: 25%;
+        height: 600px;
+        float: left;
+    }
+    .dash1 h3 {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Karla", Sans-serif;
+
+    }
+    .footer__four{
+        /* background-color: rgb(167, 125, 212); */
+        width: 25%;
+        height: 600px;
+        float: left;
+    }
+    .footer__four> .dash2 h3{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Karla", Sans-serif;
+    }
+    /* .footer__four> .dash2>li>h3::before{
+        position: absolute;
+        width: 26px;
+        height: 4px;
+        content: "";
+        background-color: #006de8;
+        margin-top: 20px;
+        left:1180px;
+    } */
+    .dash2 h4{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Karla", Sans-serif;
+    }
+    /* .dash2 >li>h4::before{
+        position: absolute;
+        width: 26px;
+        height: 4px;
+        content: "";
+        background-color: #006de8;
+        margin-top: 20px;
+        left:1180px;
+    } */
+    .subscribe{
+        position: relative;
+    }
+    .subscribe input{
+        width: 168px;
+        height: 50px;
+        background-color: #e1e6ff none repeat scroll 0 0;
+    }
+    .subscribe .btn {
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        right: 25px;
+        top: 0px;
+        background-color: #006de8;
+    }
+    .subscribe .btn>i {
+        color: white;
+        font-size: 20px;
+    }
+    .lasticons{
+        font-size: 24px;
+        color:white;
+        padding-left: 10px;
+    }
+
+
+    @media all and (max-width:768px){
+            .wrappersite, .header__info, .menu__wrapper, .menu, .menu__lists, .section__content, .ddd__wrapper, .ddd-who-are, .left__ddd, .right__ddd, .development__wrapper, .development__section, .web-development, .services__wrapper, .services__container, .services1__onair, .why-chooseus-wrapper, .why-choose-us, .why-chooseus-section1, .why-chooseus-section2, .industry__experience, .casestudy__wrapper, .casestudy__heading, .casestudy-images-wrapper, .casestudy__first, .teammember__container, .team-member-header, .team-member-text, .teammembers-images-wrapper, .team-member-images, .contactus__container, .contactus__form, .contactus__image, .contact-us-content, .footer__wrapper, .footer__first, .footer__second, .footer__third, .footer__four {
+                width: 100%;
+            }
+        } 
+
+
+       
+      
+     
+    </style>
+</head>
+<body>
+    <div class="wrappersite">
+        <div class="headerwrapper">
+            <div class="header__info">
+                <div class="info">
+                <span> <i class="fa-solid fa-headphones"></i> +91-9463661542 , +91-9988182740 </span>
+                <span><i class="fa-regular fa-envelope"></i> info@callstem.com
+                </span>
+                </div>
+            </div>
+            <div class="menu__wrapper">
+                <div class="logo">
+                    <img src="images/output-0-scaled - Copy.webp" alt="">
+                </div>
+                <div class="menu">
+                    <div class="menu__lists">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="section">
+            <div class="section__content">
+                <h4>IT Business Consulting</h4>
+                <h1>Best IT Solutions Provider Agency</h1>
+                <h5><strong>Our development services and dedicated teams cover the full spectrum of software requirements and scale both for Early-stage Startups and Large-scale Global enterprises.</strong></h5>
+                <div class="section__btn">
+                    <span>Our Services</span>
+                     <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="ddd__wrapper">
+            <div class="ddd-who-are">
+                <div class="left__ddd">
+                    <h4>WHO WE ARE</h4>
+                    <h1>We Design, Develop and Deliver</h1>
+                </div>
+                <div class="right__ddd">
+                    <p>Delivering custom, feature-rich Web Development and Mobile Applications, and CRM software development services to help global Brands across diverse industries to accelerate and empower businesses with digital transformation.</p>
+                    <p>Our mission is to build long term relationships with businesses as their technology partners. To provide them best solutions for their needs, so that they can achieve the highest value. To deliver the highest quality solution including design, architecture and after delivery service. To always work with win-win state of mind.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="development__wrapper">
+            <div class="development__section">
+                <div class="web-development">
+                    <div class="icon">
+                    <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h2>Web Development</h2>
+                    <h4>We craft functional websites and web apps engineered for best performance.</h4>
+                </div>
+
+                <div class="web-development">
+                    <div class="icon">
+                    <i class="fa-solid fa-mobile"></i>
+                    </div>
+                    <h2>App Development</h2>
+                    <h4>We build awesome mobile apps that provide lasting value and excitement to users.
+
+                    </h4>
+                </div>
+                <div class="web-development">
+                    <div class="icon">
+                    <i class="fa-sharp fa-solid fa-cubes"></i>
+                    </div>
+                    <h2>CMS Development</h2>
+                    <h4>We develop easier, faster and reliable websites with Content Management System. </h4>
+                    
+                </div>
+                <div class="web-development">
+                    <div class="icon">
+                    <i class="fa-solid fa-bullhorn"></i>                   
+                   </div>
+                    <h2>Digital Marketing</h2>
+                    <h4>Our marketing strategies have helped businesses to grow exponentially with growing world. </h4>
+                    
+                </div>
+
+            </div>
+
+        </div>
+        <div class="services__wrapper">
+            <div class="services__container">
+                <div class="services1__onair">
+                    <div class="onair__image">
+                    <img src="images/realistic-air-signs-template_23-2148798991.webp" alt="">
+                </div>
+                <div class="onair__content">
+                    <h2>Online Radio</h2>
+                    <h4>Gain competitive advantage with our integrated Media & Entertainment solutions.</h4>
+
+                </div>
+
+                </div>
+
+                <div class="services1__onair">
+                    <div class="onair__image">
+                    <img src="images/2 shopping.webp" alt="">
+                </div>
+                <div class="onair__content">
+                    <h2>ECOMMERCE, RETAIL & B2B</h2>
+                    <h4>Scalable eCommerce, Retail & B2B solutions to boost sales.</h4>
+                </div>
+                </div>
+
+                <div class="services1__onair">
+                    <div class="onair__image">
+                    <img src="images/6.social network.webp" alt="">
+                </div>
+                <div class="onair__content">
+                    <h2>SOCIAL NETWORKING</h2>
+                    <h4>Custom social media websites/app development to capitalize on massive audiences.</h4>
+
+                </div>
+
+                </div>
+
+                <div class="services1__onair">
+                    <div class="onair__image">
+                    <img src="images/4 real estate.webp" alt="">
+                </div>
+                <div class="onair__content">
+                    <h2>REAL ESTATE & PROPERTY</h2>
+                    <h4>Mobile apps & web solutions for real estate agents as well as enterprises.</h4>
+
+                </div>
+
+                </div>
+
+                <div class="services1__onair">
+                    <div class="onair__image">
+                    <img src="images/5.exam.webp" alt="">
+                </div>
+                <div class="onair__content">
+                    <h2>EDUCATION & E-LEARNING</h2>
+                    <h4>Diverse e-Learning solutions for all kinds of Institutions.</h4>
+
+                </div>
+
+                </div>
+
+                <div class="services1__onair">
+                    <div class="onair__image">
+                    <img src="images/7 app development.webp" alt="">
+                </div>
+                <div class="onair__content">
+                    <h2>ON-DEMAND SOLUTIONS</h2>
+                    <h4>Cater the needs of on-demand customers with on-demand apps.</h4>
+
+                </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="why-chooseus-wrapper">
+            <div class="why-choose-us">
+                <div class="why-chooseus-section1">
+                    <h4>WHY CHOOSE US</h4>
+                    <h1>We Are Very Different Form Others IT Solutions</h1>
+                </div>
+                <div class="why-chooseus-section2">
+                    <div class="industry__experience">
+                        <div class="industry-experience-icon">
+                            <i class="fa-solid fa-infinity"></i>
+                            
+
+                        </div>
+                        <h2>Industry experience of more than 7 years</h2>
+                        <h4>We have over seven years’ experience working on numerous projects in the Information Technology industry.</h4>
+
+                    </div>                    
+                    <div class="industry__experience">
+                        <div class="industry-experience-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                          
+                       </div>
+                        <h2>Oriented Innovation with futuristic thinking</h2>
+                        <h4>We blend our creativity and idealistic approach to design attractive, fast, and live applications for our clients.</h4>
+
+                    </div>
+                    <div class="industry__experience">
+                        <div class="industry-experience-icon">
+                          <i class="fa-solid fa-computer-mouse"></i>
+                     
+                     </div>
+                        <h2>Specialization in custom design & development</h2>
+                    <h4>We have a specialization in custom design and development. Let us know what kind of website or software you want for you. </h4>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="casestudy__wrapper">
+            <div class="casestudy__heading">
+                <h4>LATEST CASE STUDIES</h4>
+                <h1>Reads Our Recent Case Studies</h1>
+            </div>
+            <div class="casestudy-images-wrapper">
+                <div class="casestudy__first">
+                    <img src="images/11.webp" alt="">
+                    <div class="casestudy-images-firsttext">
+                        <h3><a href="#">How to Improve IT Knowledge</a></h3>
+                    </div>
+                </div>
+                
+                <div class="casestudy__first">
+                    <img src="images/12.webp" alt="">
+                    <div class="casestudy-images-firsttext">
+                        <h3><a href="#">How to Improve IT Knowledge</a></h3>
+                    </div>
+                </div>
+                <div class="casestudy__first">
+                    <img src="images/11.webp" alt="">
+                    <div class="casestudy-images-firsttext">
+                        <h3><a href="#">How to Improve IT Knowledge</a></h3>
+                    </div>                
+                </div>
+
+                <div class="casestudy__first">
+                    <img src="images/13.webp" alt="">
+                    <div class="casestudy-images-firsttext">
+                        <h3><a href="#">How to Improve IT Knowledge</a></h3>
+                    </div>                
+                </div>
+
+                <div class="casestudy__first">
+                    <img src="images/11.webp" alt="">
+                    <div class="casestudy-images-firsttext">
+                        <h3><a href="#">How to Improve IT Knowledge</a></h3>
+                    </div>                
+                </div>
+
+                <div class="casestudy__first">
+                    <img src="images/13.webp" alt="">
+                    <div class="casestudy-images-firsttext">
+                        <h3><a href="#">How to Improve IT Knowledge</a></h3>
+                    </div>                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="teammember__container">
+            <div class="team-member-header">
+                <div class="team-member-text">
+                    <h3>OUR TEAM MEMBER</h3>
+                    <h1>Meet Our Exclusive Leadership</h1>
+                </div>
+
+                <div class="teammembers-images-wrapper">
+                <div class="team-member-images">
+                    <img src="images/member 1.webp" alt="">
+                    <div class="members__content">
+                        <h2>Ashraful Sarkar</h2>
+                        <p>Web Developer</p>
+    
+                        <div class="members__icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member-images">
+                    <img src="images/member 2.webp" alt="">
+                    <div class="members__content">
+                        <h2>Doris Jordan</h2>
+                        <p>Design Expert</p>
+    
+                        <div class="members__icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member-images">
+                    <img src="images/member 3.webp" alt="">
+                    <div class="members__content">
+                        <h2>Doris Jordan</h2>
+                        <p>Design Expert</p>
+    
+                        <div class="members__icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member-images">
+                    <img src="images/member 1.webp" alt="">
+                    <div class="members__content">
+                        <h2>Ashraful Sarkar</h2>
+                        <p>Web Developer</p>
+    
+                        <div class="members__icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-member-images">
+                    <img src="images/5 member.webp" alt="">
+                    <div class="members__content">
+                        <h2>Doris Jordan</h2>
+                        <p>Design Expert</p>
+    
+                        <div class="members__icons">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+    
+    
+                   
+
+                </div>
+               
+
+            </div>
+
+        </div>
+
+        <div class="contactus__container">
+            <h4>CONTACT US</h4>
+            <div class="contactus__form">
+                <div class="contactus__image">
+                    <img src="images/contact-man.webp" alt="">
+                </div>
+                <div class="contact-us-content">
+                    <form action="">
+                       <p> <label class="fname">Name</label>
+                    <span>*</span></p>
+                    <p><input type="name"></p>
+                    <p> <label class="fname">Email</label>
+                    <span>*</span></p>
+                    <p><input type="email"></p>
+                    <p> <label class="fname">Comment</label>
+                        <span>*</span>
+                        <p><textarea name="name"  cols="30" rows="10"></textarea></p>
+                        <p><button class="btn">Submit</button></p>
+
+
+
+
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer__wrapper">
+            <div class="footer__first">
+                <div class="footer__logo">
+                    <img src="images/output-0-scaled - Copy.webp" alt="">
+                </div>
+                <div class="footer-first-content">
+                    <p>We at CALLSTEM are not only about the code, we are your technology partners.Our experts’ team, a well-talented group, solves your software concerns and assures you to get an excellent and functional product.</p>
+                </div>
+
+            </div>
+
+            <div class="footer__second">
+                <ul class="footer-second-lists dash">
+                    <li><h3>Pages</h3></li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                    <li>Team</li>
+                    <li>Our Plans</li>
+                    <li>FAQ</li>
+                </ul>
+
+            </div>
+            <div class="footer__third">
+                <ul class="footer-second-lists dash1">
+                    <li><h3>Working Hours</h3></li>
+                    <li><h4>Monday - Saturday: 10:00 - 18:00</h4></li>
+                    
+                </ul>
+
+            </div>
+            <div class="footer__four">
+                <ul class="footer-second-lists dash2">
+                    <li><h3>Get Daily Update</h3></li>
+                    <form action="" class="subscribe">
+                        <p><input type="text" placeholder="Your Email"></p>
+                        <p><button type="submit" class="btn">
+                            <i class="fa-solid fa-right-long"></i></button></p>
+
+                    </form>
+                    <li><h4>Follow Us On</h4></li>
+                    <li><div class="lasticons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+        </div>
+</body>
+</html>
